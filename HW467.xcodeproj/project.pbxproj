@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		0D445C5A2D482D3D00E81FAF /* HW4UITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D445C592D482D3D00E81FAF /* HW4UITests.swift */; };
+		0D445C5D2D48423000E81FAF /* HW6UITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D445C5B2D48423000E81FAF /* HW6UITests.swift */; };
+		0D445C5E2D48423000E81FAF /* HW7UITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D445C5C2D48423000E81FAF /* HW7UITests.swift */; };
 		0DBF0F2D2D482CDF0089FC55 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DBF0F2C2D482CDF0089FC55 /* AppDelegate.swift */; };
 		0DBF0F2F2D482CDF0089FC55 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DBF0F2E2D482CDF0089FC55 /* SceneDelegate.swift */; };
 		0DBF0F312D482CDF0089FC55 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DBF0F302D482CDF0089FC55 /* ViewController.swift */; };
@@ -37,6 +39,8 @@
 
 /* Begin PBXFileReference section */
 		0D445C592D482D3D00E81FAF /* HW4UITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HW4UITests.swift; sourceTree = "<group>"; };
+		0D445C5B2D48423000E81FAF /* HW6UITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HW6UITests.swift; sourceTree = "<group>"; };
+		0D445C5C2D48423000E81FAF /* HW7UITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HW7UITests.swift; sourceTree = "<group>"; };
 		0DBF0F292D482CDF0089FC55 /* HW467.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HW467.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0DBF0F2C2D482CDF0089FC55 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		0DBF0F2E2D482CDF0089FC55 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -123,6 +127,8 @@
 			children = (
 				0DBF0F4D2D482CE00089FC55 /* HW467UITests.swift */,
 				0D445C592D482D3D00E81FAF /* HW4UITests.swift */,
+				0D445C5B2D48423000E81FAF /* HW6UITests.swift */,
+				0D445C5C2D48423000E81FAF /* HW7UITests.swift */,
 			);
 			path = HW467UITests;
 			sourceTree = "<group>";
@@ -277,6 +283,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				0DBF0F4E2D482CE00089FC55 /* HW467UITests.swift in Sources */,
+				0D445C5D2D48423000E81FAF /* HW6UITests.swift in Sources */,
+				0D445C5E2D48423000E81FAF /* HW7UITests.swift in Sources */,
 				0D445C5A2D482D3D00E81FAF /* HW4UITests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
