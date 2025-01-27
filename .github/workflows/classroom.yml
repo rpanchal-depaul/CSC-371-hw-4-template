@@ -35,7 +35,7 @@ jobs:
       with:
         test-name: testAllElementsExist
         setup-command: ''
-        command: xcodebuild test -project HW467.xcodeproj -scheme HW4 -destination 'platform=iOS Simulator,name=iPhone 15 Pro Max,OS=17.5' -only-testing:HW467UITests/HW467UITests/testAllElementsExist | grep -q "Executed 1 test, with 0 failures"
+        command: xcodebuild test -project HW467.xcodeproj -scheme HW467 -destination 'platform=iOS Simulator,name=iPhone 15 Pro Max,OS=17.5' -only-testing:HW467UITests/HW467UITests/testAllElementsExist | grep -q "Executed 1 test, with 0 failures"
         timeout: 60
         max-score: 10
 
@@ -45,7 +45,7 @@ jobs:
       with:
         test-name: testPowerButtonTogglesTVPowerValue
         setup-command: ''
-        command: xcodebuild test -project HW467.xcodeproj -scheme HW4 -destination 'platform=iOS Simulator,name=iPhone 15 Pro Max,OS=17.5' -only-testing:HW467UITests/HW467UITests/testPowerButtonTogglesTVPowerValue | grep -q "Executed 1 test, with 0 failures"
+        command: xcodebuild test -project HW467.xcodeproj -scheme HW467 -destination 'platform=iOS Simulator,name=iPhone 15 Pro Max,OS=17.5' -only-testing:HW467UITests/HW467UITests/testPowerButtonTogglesTVPowerValue | grep -q "Executed 1 test, with 0 failures"
         timeout: 60
         max-score: 10
 
@@ -55,7 +55,7 @@ jobs:
       with:
         test-name: testVolumeSliderChangesVolumeValue
         setup-command: ''
-        command: xcodebuild test -project HW467.xcodeproj -scheme HW4 -destination 'platform=iOS Simulator,name=iPhone 15 Pro Max,OS=17.5' -only-testing:HW467UITests/HW467UITests/testVolumeSliderChangesVolumeValue | grep -q "Executed 1 test, with 0 failures"
+        command: xcodebuild test -project HW467.xcodeproj -scheme HW467 -destination 'platform=iOS Simulator,name=iPhone 15 Pro Max,OS=17.5' -only-testing:HW467UITests/HW467UITests/testVolumeSliderChangesVolumeValue | grep -q "Executed 1 test, with 0 failures"
         timeout: 60
         max-score: 10
 
@@ -65,7 +65,7 @@ jobs:
       with:
         test-name: testVolumeSliderStaysWithinRange
         setup-command: ''
-        command: xcodebuild test -project HW467.xcodeproj -scheme HW4 -destination 'platform=iOS Simulator,name=iPhone 15 Pro Max,OS=17.5' -only-testing:HW467UITests/HW467UITests/testAllElemetestVolumeSliderStaysWithinRangentsExist | grep -q "Executed 1 test, with 0 failures"
+        command: xcodebuild test -project HW467.xcodeproj -scheme HW467 -destination 'platform=iOS Simulator,name=iPhone 15 Pro Max,OS=17.5' -only-testing:HW467UITests/HW467UITests/testAllElemetestVolumeSliderStaysWithinRangentsExist | grep -q "Executed 1 test, with 0 failures"
         timeout: 60
         max-score: 10
 
@@ -75,7 +75,7 @@ jobs:
       with:
         test-name: testChannelPlusIncrementsChannelValue
         setup-command: ''
-        command: xcodebuild test -project HW467.xcodeproj -scheme HW4 -destination 'platform=iOS Simulator,name=iPhone 15 Pro Max,OS=17.5' -only-testing:HW467UITests/HW467UITests/testChannelPlusIncrementsChannelValue | grep -q "Executed 1 test, with 0 failures"
+        command: xcodebuild test -project HW467.xcodeproj -scheme HW467 -destination 'platform=iOS Simulator,name=iPhone 15 Pro Max,OS=17.5' -only-testing:HW467UITests/HW467UITests/testChannelPlusIncrementsChannelValue | grep -q "Executed 1 test, with 0 failures"
         timeout: 60
         max-score: 5
 
@@ -85,7 +85,7 @@ jobs:
       with:
         test-name: testChannelMinusDecrementsChannelValue
         setup-command: ''
-        command: xcodebuild test -project HW467.xcodeproj -scheme HW4 -destination 'platform=iOS Simulator,name=iPhone 15 Pro Max,OS=17.5' -only-testing:HW467UITests/HW467UITests/testChannelMinusDecrementsChannelValue | grep -q "Executed 1 test, with 0 failures"
+        command: xcodebuild test -project HW467.xcodeproj -scheme HW467 -destination 'platform=iOS Simulator,name=iPhone 15 Pro Max,OS=17.5' -only-testing:HW467UITests/HW467UITests/testChannelMinusDecrementsChannelValue | grep -q "Executed 1 test, with 0 failures"
         timeout: 60
         max-score: 5
 
@@ -95,7 +95,7 @@ jobs:
       with:
         test-name: testChannelNumberSequence01
         setup-command: ''
-        command: xcodebuild test -project HW467.xcodeproj -scheme HW4 -destination 'platform=iOS Simulator,name=iPhone 15 Pro Max,OS=17.5' -only-testing:HW467UITests/HW467UITests/testChannelNumberSequence01 | grep -q "Executed 1 test, with 0 failures"
+        command: xcodebuild test -project HW467.xcodeproj -scheme HW467 -destination 'platform=iOS Simulator,name=iPhone 15 Pro Max,OS=17.5' -only-testing:HW467UITests/HW467UITests/testChannelNumberSequence01 | grep -q "Executed 1 test, with 0 failures"
         timeout: 60
         max-score: 5
 
@@ -105,7 +105,7 @@ jobs:
       with:
         test-name: testBasicAddtestChannelNumberSequence02Operation5
         setup-command: ''
-        command: xcodebuild test -project HW467.xcodeproj -scheme HW4 -destination 'platform=iOS Simulator,name=iPhone 15 Pro Max,OS=17.5' -only-testing:HW467UITests/HW467UITests/testChannelNumberSequence02 | grep -q "Executed 1 test, with 0 failures"
+        command: xcodebuild test -project HW467.xcodeproj -scheme HW467 -destination 'platform=iOS Simulator,name=iPhone 15 Pro Max,OS=17.5' -only-testing:HW467UITests/HW467UITests/testChannelNumberSequence02 | grep -q "Executed 1 test, with 0 failures"
         timeout: 60
         max-score: 5
 
@@ -115,7 +115,7 @@ jobs:
       with:
         test-name: testChannelNumberSequence03
         setup-command: ''
-        command: xcodebuild test -project HW467.xcodeproj -scheme HW4 -destination 'platform=iOS Simulator,name=iPhone 15 Pro Max,OS=17.5' -only-testing:HW467UITests/HW467UITests/testChannelNumberSequence03 | grep -q "Executed 1 test, with 0 failures"
+        command: xcodebuild test -project HW467.xcodeproj -scheme HW467 -destination 'platform=iOS Simulator,name=iPhone 15 Pro Max,OS=17.5' -only-testing:HW467UITests/HW467UITests/testChannelNumberSequence03 | grep -q "Executed 1 test, with 0 failures"
         timeout: 60
         max-score: 5
 
@@ -125,7 +125,7 @@ jobs:
       with:
         test-name: testChannelNumberSequence04
         setup-command: ''
-        command: xcodebuild test -project HW467.xcodeproj -scheme HW4 -destination 'platform=iOS Simulator,name=iPhone 15 Pro Max,OS=17.5' -only-testing:HW467UITests/HW467UITests/testChannelNumberSequence04 | grep -q "Executed 1 test, with 0 failures"
+        command: xcodebuild test -project HW467.xcodeproj -scheme HW467 -destination 'platform=iOS Simulator,name=iPhone 15 Pro Max,OS=17.5' -only-testing:HW467UITests/HW467UITests/testChannelNumberSequence04 | grep -q "Executed 1 test, with 0 failures"
         timeout: 60
         max-score: 5
 
@@ -135,7 +135,7 @@ jobs:
       with:
         test-name: testChannelTopEndOfRange
         setup-command: ''
-        command: xcodebuild test -project HW467.xcodeproj -scheme HW4 -destination 'platform=iOS Simulator,name=iPhone 15 Pro Max,OS=17.5' -only-testing:HW467UITests/HW467UITests/testChannelTopEndOfRange | grep -q "Executed 1 test, with 0 failures"
+        command: xcodebuild test -project HW467.xcodeproj -scheme HW467HW4 -destination 'platform=iOS Simulator,name=iPhone 15 Pro Max,OS=17.5' -only-testing:HW467UITests/HW467UITests/testChannelTopEndOfRange | grep -q "Executed 1 test, with 0 failures"
         timeout: 60
         max-score: 5
 
@@ -145,7 +145,7 @@ jobs:
       with:
         test-name: testChannelBottomEndOfRange
         setup-command: ''
-        command: xcodebuild test -project HW467.xcodeproj -scheme HW4 -destination 'platform=iOS Simulator,name=iPhone 15 Pro Max,OS=17.5' -only-testing:HW467UITests/HW467UITests/testChannelBottomEndOfRange | grep -q "Executed 1 test, with 0 failures"
+        command: xcodebuild test -project HW467.xcodeproj -scheme HW467 -destination 'platform=iOS Simulator,name=iPhone 15 Pro Max,OS=17.5' -only-testing:HW467UITests/HW467UITests/testChannelBottomEndOfRange | grep -q "Executed 1 test, with 0 failures"
         timeout: 60
         max-score: 5
 
@@ -155,7 +155,7 @@ jobs:
       with:
         test-name: testSegmentedControlChangesChannelValue
         setup-command: ''
-        command: xcodebuild test -project HW467.xcodeproj -scheme HW4 -destination 'platform=iOS Simulator,name=iPhone 15 Pro Max,OS=17.5' -only-testing:HW467UITests/HW467UITests/testSegmentedControlChangesChannelValue | grep -q "Executed 1 test, with 0 failures"
+        command: xcodebuild test -project HW467.xcodeproj -scheme HW467 -destination 'platform=iOS Simulator,name=iPhone 15 Pro Max,OS=17.5' -only-testing:HW467UITests/HW467UITests/testSegmentedControlChangesChannelValue | grep -q "Executed 1 test, with 0 failures"
         timeout: 60
         max-score: 10
 
