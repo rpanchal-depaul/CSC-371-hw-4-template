@@ -1,0 +1,183 @@
+name: Autograding Tests
+on:
+  push:
+    branches:
+      - main
+  repository_dispatch:
+    types: [test_result]
+
+permissions:
+  checks: write
+  actions: read
+  contents: read
+jobs:
+  run-autograding-tests:
+    runs-on: self-hosted
+    if: github.actor != 'github-classroom[bot]'
+
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v4
+
+    - name: buildProject
+      id: buildProject
+      uses: classroom-resources/autograding-command-grader@v1
+      with:
+        test-name: buildProject
+        setup-command: ''
+        command: xcodebuild build -project HW467.xcodeproj -scheme HW467 -destination 'platform=iOS Simulator,name=iPhone 15 Pro Max,OS=17.5'
+        timeout: 60
+        max-score: 5
+
+    - name: testAllElementsExist
+      id: testAllElementsExist
+      uses: classroom-resources/autograding-command-grader@v1
+      with:
+        test-name: testAllElementsExist
+        setup-command: ''
+        command: xcodebuild test -project HW467.xcodeproj -scheme HW4 -destination 'platform=iOS Simulator,name=iPhone 15 Pro Max,OS=17.5' -only-testing:HW467UITests/HW467UITests/testAllElementsExist | grep -q "Executed 1 test, with 0 failures"
+        timeout: 60
+        max-score: 10
+
+    - name: testPowerButtonTogglesTVPowerValue
+      id: testPowerButtonTogglesTVPowerValue
+      uses: classroom-resources/autograding-command-grader@v1
+      with:
+        test-name: testPowerButtonTogglesTVPowerValue
+        setup-command: ''
+        command: xcodebuild test -project HW467.xcodeproj -scheme HW4 -destination 'platform=iOS Simulator,name=iPhone 15 Pro Max,OS=17.5' -only-testing:HW467UITests/HW467UITests/testPowerButtonTogglesTVPowerValue | grep -q "Executed 1 test, with 0 failures"
+        timeout: 60
+        max-score: 10
+
+    - name: testVolumeSliderChangesVolumeValue
+      id: testVolumeSliderChangesVolumeValue
+      uses: classroom-resources/autograding-command-grader@v1
+      with:
+        test-name: testVolumeSliderChangesVolumeValue
+        setup-command: ''
+        command: xcodebuild test -project HW467.xcodeproj -scheme HW4 -destination 'platform=iOS Simulator,name=iPhone 15 Pro Max,OS=17.5' -only-testing:HW467UITests/HW467UITests/testVolumeSliderChangesVolumeValue | grep -q "Executed 1 test, with 0 failures"
+        timeout: 60
+        max-score: 10
+
+    - name: testVolumeSliderStaysWithinRange
+      id: testVolumeSliderStaysWithinRange
+      uses: classroom-resources/autograding-command-grader@v1
+      with:
+        test-name: testVolumeSliderStaysWithinRange
+        setup-command: ''
+        command: xcodebuild test -project HW467.xcodeproj -scheme HW4 -destination 'platform=iOS Simulator,name=iPhone 15 Pro Max,OS=17.5' -only-testing:HW467UITests/HW467UITests/testAllElemetestVolumeSliderStaysWithinRangentsExist | grep -q "Executed 1 test, with 0 failures"
+        timeout: 60
+        max-score: 10
+
+    - name: testChannelPlusIncrementsChannelValue
+      id: testChannelPlusIncrementsChannelValue
+      uses: classroom-resources/autograding-command-grader@v1
+      with:
+        test-name: testChannelPlusIncrementsChannelValue
+        setup-command: ''
+        command: xcodebuild test -project HW467.xcodeproj -scheme HW4 -destination 'platform=iOS Simulator,name=iPhone 15 Pro Max,OS=17.5' -only-testing:HW467UITests/HW467UITests/testChannelPlusIncrementsChannelValue | grep -q "Executed 1 test, with 0 failures"
+        timeout: 60
+        max-score: 5
+
+    - name: testChannelMinusDecrementsChannelValue
+      id: testChannelMinusDecrementsChannelValue
+      uses: classroom-resources/autograding-command-grader@v1
+      with:
+        test-name: testChannelMinusDecrementsChannelValue
+        setup-command: ''
+        command: xcodebuild test -project HW467.xcodeproj -scheme HW4 -destination 'platform=iOS Simulator,name=iPhone 15 Pro Max,OS=17.5' -only-testing:HW467UITests/HW467UITests/testChannelMinusDecrementsChannelValue | grep -q "Executed 1 test, with 0 failures"
+        timeout: 60
+        max-score: 5
+
+    - name: testChannelNumberSequence01
+      id: testChannelNumberSequence01
+      uses: classroom-resources/autograding-command-grader@v1
+      with:
+        test-name: testChannelNumberSequence01
+        setup-command: ''
+        command: xcodebuild test -project HW467.xcodeproj -scheme HW4 -destination 'platform=iOS Simulator,name=iPhone 15 Pro Max,OS=17.5' -only-testing:HW467UITests/HW467UITests/testChannelNumberSequence01 | grep -q "Executed 1 test, with 0 failures"
+        timeout: 60
+        max-score: 5
+
+    - name: testChannelNumberSequence02
+      id: testChannelNumberSequence02
+      uses: classroom-resources/autograding-command-grader@v1
+      with:
+        test-name: testBasicAddtestChannelNumberSequence02Operation5
+        setup-command: ''
+        command: xcodebuild test -project HW467.xcodeproj -scheme HW4 -destination 'platform=iOS Simulator,name=iPhone 15 Pro Max,OS=17.5' -only-testing:HW467UITests/HW467UITests/testChannelNumberSequence02 | grep -q "Executed 1 test, with 0 failures"
+        timeout: 60
+        max-score: 5
+
+    - name: testChannelNumberSequence03
+      id: testChannelNumberSequence03
+      uses: classroom-resources/autograding-command-grader@v1
+      with:
+        test-name: testChannelNumberSequence03
+        setup-command: ''
+        command: xcodebuild test -project HW467.xcodeproj -scheme HW4 -destination 'platform=iOS Simulator,name=iPhone 15 Pro Max,OS=17.5' -only-testing:HW467UITests/HW467UITests/testChannelNumberSequence03 | grep -q "Executed 1 test, with 0 failures"
+        timeout: 60
+        max-score: 5
+
+    - name: testChannelNumberSequence04
+      id: testChannelNumberSequence04
+      uses: classroom-resources/autograding-command-grader@v1
+      with:
+        test-name: testChannelNumberSequence04
+        setup-command: ''
+        command: xcodebuild test -project HW467.xcodeproj -scheme HW4 -destination 'platform=iOS Simulator,name=iPhone 15 Pro Max,OS=17.5' -only-testing:HW467UITests/HW467UITests/testChannelNumberSequence04 | grep -q "Executed 1 test, with 0 failures"
+        timeout: 60
+        max-score: 5
+
+    - name: testChannelTopEndOfRange
+      id: testChannelTopEndOfRange
+      uses: classroom-resources/autograding-command-grader@v1
+      with:
+        test-name: testChannelTopEndOfRange
+        setup-command: ''
+        command: xcodebuild test -project HW467.xcodeproj -scheme HW4 -destination 'platform=iOS Simulator,name=iPhone 15 Pro Max,OS=17.5' -only-testing:HW467UITests/HW467UITests/testChannelTopEndOfRange | grep -q "Executed 1 test, with 0 failures"
+        timeout: 60
+        max-score: 5
+
+    - name: testChannelBottomEndOfRange
+      id: testChannelBottomEndOfRange
+      uses: classroom-resources/autograding-command-grader@v1
+      with:
+        test-name: testChannelBottomEndOfRange
+        setup-command: ''
+        command: xcodebuild test -project HW467.xcodeproj -scheme HW4 -destination 'platform=iOS Simulator,name=iPhone 15 Pro Max,OS=17.5' -only-testing:HW467UITests/HW467UITests/testChannelBottomEndOfRange | grep -q "Executed 1 test, with 0 failures"
+        timeout: 60
+        max-score: 5
+
+    - name: testSegmentedControlChangesChannelValue
+      id: testSegmentedControlChangesChannelValue
+      uses: classroom-resources/autograding-command-grader@v1
+      with:
+        test-name: testSegmentedControlChangesChannelValue
+        setup-command: ''
+        command: xcodebuild test -project HW467.xcodeproj -scheme HW4 -destination 'platform=iOS Simulator,name=iPhone 15 Pro Max,OS=17.5' -only-testing:HW467UITests/HW467UITests/testSegmentedControlChangesChannelValue | grep -q "Executed 1 test, with 0 failures"
+        timeout: 60
+        max-score: 10
+
+    # Grading
+          
+    - name: Autograding Reporter
+      uses: classroom-resources/autograding-grading-reporter@v1
+      env:
+        BUILDPROJECT_RESULTS: "${{steps.buildProject.outputs.result}}"
+        TESTALLELEMENTSEXIST_RESULTS: "${{steps.testAllElementsExist.outputs.result}}"
+        TESTPOWERBUTTONTOGGLESTVPOWERVALUE_RESULTS: "${{steps.testPowerButtonTogglesTVPowerValue.outputs.result}}"
+        TESTVOLUMESLIDERCHANGESVOLUMEVALUE_RESULTS: "${{steps.testVolumeSliderChangesVolumeValue.outputs.result}}"
+        TESTVOLUMESLIDERSTAYSWITHINRANGE_RESULTS: "${{steps.testVolumeSliderStaysWithinRange.outputs.result}}"
+        TESTCHANNELPLUSINCREMENTSCHANNELVALUE_RESULTS: "${{steps.testChannelPlusIncrementsChannelValue.outputs.result}}"
+        TESTCHANNELMINUSDECREMENTSCHANNELVALUE_RESULTS: "${{steps.testChannelMinusDecrementsChannelValue.outputs.result}}"
+        TESTCHANNELNUMBERSEQUENCE01_RESULTS: "${{steps.testChannelNumberSequence01.outputs.result}}"
+        TESTCHANNELNUMBERSEQUENCE02_RESULTS: "${{steps.testChannelNumberSequence02.outputs.result}}"
+        TESTCHANNELNUMBERSEQUENCE03_RESULTS: "${{steps.testChannelNumberSequence03.outputs.result}}"
+        TESTCHANNELNUMBERSEQUENCE04_RESULTS: "${{steps.testChannelNumberSequence04.outputs.result}}"
+        TESTCHANNELTOPENDOFRANGE_RESULTS: "${{steps.testChannelTopEndOfRange.outputs.result}}"
+        TESTCHANNELBOTTOMENDOFRANGE_RESULTS: "${{steps.testChannelTopEndOfRange.outputs.result}}"
+        TESTSEGMENTEDCONTROLCHANGESCHANNELVALUE_RESULTS: "${{steps.testSegmentedControlChangesChannelValue.outputs.result}}"
+
+      with:
+        runners: buildProject,testAllElementsExist,testPowerButtonTogglesTVPowerValue,testVolumeSliderChangesVolumeValue,testVolumeSliderStaysWithinRange,testChannelPlusIncrementsChannelValue,testChannelMinusDecrementsChannelValue,testChannelNumberSequence01,testChannelNumberSequence02,testChannelNumberSequence03,testChannelNumberSequence04,testChannelTopEndOfRange,testChannelTopEndOfRange,testSegmentedControlChangesChannelValue
